@@ -40,5 +40,10 @@ Our goal is to build a topic sentence generation tool. This tool receives a body
 
 ## Examples
 
+| Abstract | Predicted Title | Actural Title | BLEU Score |
+| -------- | --------------- | ------------- | ---------- |
+| We offer an introduction for mathematicians to the univalent foundations of Vladimir Voevodsky, aiming to explain how he chose to encode mathematics in type theory and how the encoding reveals a potentially viable foundation for all of modern mathematics that can serve as an alternative to set theory | Vladimir Voevodsky chose to encode mathematics in type theory | An introduction to univalent foundations for mathematicians |
+
+
 ## References
 1. https://en.wikipedia.org/wiki/Topic_sentence
