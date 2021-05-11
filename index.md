@@ -34,6 +34,9 @@ Our goal is to build a topic sentence generation tool. This tool receives a body
 
 ## Methodologies
 
+## Dataset
+![](https://user-images.githubusercontent.com/18320430/117766595-ce3eda80-b1fd-11eb-9ba7-09524376b606.png)
+
 ### T5 Model
 
 ### BLEU Score
