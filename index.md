@@ -35,7 +35,7 @@ Our goal is to build a topic sentence generation tool. This tool receives a body
 ## Methodologies
 
 ## Dataset Sample
-```json
+```javascript
 {
   "id": "0704.0001",
   "submitter": "Pavel Nadolsky",
