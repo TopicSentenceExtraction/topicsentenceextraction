@@ -84,7 +84,7 @@ def bleu_v2(candidate_sentence, reference_sentences, max_gram, weights,mode=0):
 
 def main():
     # read test result json
-    df = pd.read_json('./data/test_result2.json', orient='split')
+    df = pd.read_json('./data/predict/predict2/test_predict.json', orient='split')
     # df.to_json('./data/test_result_columns.json', orient='split')
     predict_titles = df['predict_title'].to_list()
     actual_titles = df['actual_title'].to_list()
@@ -92,11 +92,15 @@ def main():
     # one input and one output list
     n = len(predict_titles)
     for i in range(n):
-        bleu_v2_score = bleu_v2(predict_titles[i], [actual_titles[i]], 1, weights=[1], mode=0)
-        bleu_list.append(bleu_v2_score)
+        try:
+            bleu_v2_score = bleu_v2(predict_titles[i], [actual_titles[i]], 1, weights=[1], mode=0)
+        except:
+            bleu_v2_score = 0
+        finally:
+            bleu_list.append(bleu_v2_score)
     df['bleu'] = bleu_list
     print(df)
-    df.to_json('./data/test_result_columns2.json', orient='split')
+    df.to_json('./data/predict/predict2/test_predict_columns.json', orient='split')
 
 
 if __name__ == '__main__':
